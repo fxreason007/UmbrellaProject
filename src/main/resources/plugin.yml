@@ -1,0 +1,11 @@
+name: UmbrellaProject
+version: '${version}'
+
+main: zxc.fxreason.umbrellaProject.UmbrellaProject
+api-version: '26.1.2'
+load: POSTWORLD
+
+commands:
+  giveitem:
+    description: Выдать кастомный предмет
+    usage: /giveitem <предмет> [количество]
