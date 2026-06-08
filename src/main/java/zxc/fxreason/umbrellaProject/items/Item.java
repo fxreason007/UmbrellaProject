@@ -11,8 +11,9 @@ public class Item {
 
     private String name, id;
     private Material material;
+    private Category category;
 
-    public Item(String name, String id, Material material) {
+    public Item(String name, String id, Material material, Category category) {
         this.name = name;
         this.id = id;
         this.material = material;

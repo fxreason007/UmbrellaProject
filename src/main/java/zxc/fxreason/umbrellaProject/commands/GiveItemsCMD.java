@@ -8,8 +8,8 @@ import org.bukkit.entity.Player;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 import zxc.fxreason.umbrellaProject.UmbrellaProject;
-import zxc.fxreason.umbrellaProject.items.list.Bandage;
-import zxc.fxreason.umbrellaProject.items.list.Rot;
+import zxc.fxreason.umbrellaProject.items.list.medicine.Bandage;
+import zxc.fxreason.umbrellaProject.items.list.food.Rot;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -69,14 +69,14 @@ public class GiveItemsCMD implements CommandExecutor, TabCompleter {
     }
 
     private void giveBandage(Player player, int amount) {
-        Bandage bandage = new Bandage(plugin);
+        Bandage bandage = plugin.getItemManager().getBandage();
         for (int i = 0; i < amount; i++) {
             player.getInventory().addItem(bandage.createItem());
         }
     }
 
     private void giveRot(Player player, int amount) {
-        Rot rot = new Rot();
+        Rot rot = plugin.getItemManager().getRot();
         for (int i = 0; i < amount; i++) {
             player.getInventory().addItem(rot.createItem());
         }

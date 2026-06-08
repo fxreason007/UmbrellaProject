@@ -1,4 +1,4 @@
-package zxc.fxreason.umbrellaProject.items.list;
+package zxc.fxreason.umbrellaProject.items.list.medicine;
 
 import org.bukkit.Material;
 import org.bukkit.entity.Player;
@@ -7,6 +7,7 @@ import org.bukkit.inventory.meta.ItemMeta;
 import org.bukkit.inventory.meta.components.CustomModelDataComponent;
 import org.bukkit.scheduler.BukkitRunnable;
 import zxc.fxreason.umbrellaProject.UmbrellaProject;
+import zxc.fxreason.umbrellaProject.items.Category;
 import zxc.fxreason.umbrellaProject.items.Item;
 
 import java.util.HashMap;
@@ -20,7 +21,7 @@ public class Bandage extends Item {
     private UmbrellaProject plugin;
 
     public Bandage(UmbrellaProject plugin) {
-        super("§fБинт", "1001", Material.PAPER);
+        super("§fБинт", "1001", Material.PAPER, Category.MEDICINE);
         this.plugin = plugin;
     }
 

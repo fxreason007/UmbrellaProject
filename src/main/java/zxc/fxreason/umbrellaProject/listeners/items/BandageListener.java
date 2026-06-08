@@ -5,7 +5,7 @@ import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerInteractEvent;
 import org.bukkit.event.player.PlayerSwapHandItemsEvent;
 import zxc.fxreason.umbrellaProject.UmbrellaProject;
-import zxc.fxreason.umbrellaProject.items.list.Bandage;
+import zxc.fxreason.umbrellaProject.items.list.medicine.Bandage;
 
 public class BandageListener implements Listener {
 
@@ -18,7 +18,7 @@ public class BandageListener implements Listener {
     @EventHandler
     public void onItemUse(PlayerInteractEvent e) {
         if (e.getItem() != null && e.getItem().hasItemMeta() && e.getItem().getItemMeta().getDisplayName().equals("§fБинт")) {
-            plugin.getBandage().onUse(e.getPlayer());
+            plugin.getItemManager().getBandage().onUse(e.getPlayer());
             e.setCancelled(true);
         }
     }

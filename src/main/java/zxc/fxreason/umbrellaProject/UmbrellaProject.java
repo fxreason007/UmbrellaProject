@@ -2,19 +2,17 @@ package zxc.fxreason.umbrellaProject;
 
 import org.bukkit.plugin.java.JavaPlugin;
 import zxc.fxreason.umbrellaProject.commands.GiveItemsCMD;
-import zxc.fxreason.umbrellaProject.items.list.Bandage;
-import zxc.fxreason.umbrellaProject.items.list.Rot;
+import zxc.fxreason.umbrellaProject.items.ItemManager;
 import zxc.fxreason.umbrellaProject.listeners.items.BandageListener;
 
 public final class UmbrellaProject extends JavaPlugin {
 
-    private Bandage bandage;
-    private Rot rot;
+    private ItemManager itemManager = new ItemManager(this);
 
     @Override
     public void onEnable() {
-        bandage = new Bandage(this);
-        rot = new Rot();
+        itemManager.initItems();
+
         getServer().getPluginManager().registerEvents(new BandageListener(this), this);
 
         this.getCommand("giveitem").setExecutor(new GiveItemsCMD(this));
@@ -26,7 +24,7 @@ public final class UmbrellaProject extends JavaPlugin {
         System.out.println("Bye, world!");
     }
 
-    public Bandage getBandage() {
-        return bandage;
+    public ItemManager getItemManager() {
+        return itemManager;
     }
 }
