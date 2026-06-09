@@ -21,7 +21,7 @@ public class Rot extends Item {
         if (player == null) {
             return;
         }
-        player.addPotionEffect(new PotionEffect(PotionEffectType.NAUSEA, 10, 2));
+        player.addPotionEffect(new PotionEffect(PotionEffectType.NAUSEA, 200, 2));
     }
 
 }

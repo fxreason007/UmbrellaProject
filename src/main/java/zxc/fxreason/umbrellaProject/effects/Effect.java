@@ -2,12 +2,14 @@ package zxc.fxreason.umbrellaProject.effects;
 
 public class Effect {
 
-    float isCancelable;
+    boolean isCancelable;
+    String name;
 
-    public Effect(float isCancelable) {
+    public Effect(boolean isCancelable, String name) {
         this.isCancelable = isCancelable;
+        this.name = name;
     }
 
-
+    
 
 }
